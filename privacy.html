@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nudge privacy policy</title>
+<meta name="description" content="What the Nudge browser extension handles and where it goes.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #08090a;
+    --surface: #0f1011;
+    --surface-2: #141516;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #f7f8f8;
+    --muted: #8a8f98;
+    --body: #b4b8bf;
+    --subtle: #62666d;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 24px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--body);
+    font: 15px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--text); text-decoration: underline; text-decoration-color: rgba(255,255,255,.3); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--text); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  header.top { border-bottom: 1px solid var(--border); }
+  header.top .wrap { max-width: 960px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 600; text-decoration: none; }
+  .mark { width: 22px; height: 22px; border-radius: 6px; background: linear-gradient(135deg, #8b91ff, #5a5fd6); display: grid; place-items: center; }
+  .mark svg { width: 12px; height: 12px; }
+  nav.links { display: flex; gap: 22px; font-size: 14px; }
+  nav.links a { color: var(--muted); text-decoration: none; }
+  nav.links a:hover { color: var(--text); }
+  main { padding: 72px 0 64px; }
+  h1 { color: var(--text); font-size: clamp(32px, 5vw, 44px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 600; margin: 0 0 10px; }
+  .updated { color: var(--subtle); font-size: 14px; margin: 0 0 36px; }
+  .summary { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; margin: 0 0 8px; }
+  .summary p { margin: 0; }
+  h2 { color: var(--text); font-size: 20px; letter-spacing: -0.02em; font-weight: 600; margin: 48px 0 12px; padding-top: 28px; border-top: 1px solid var(--border); }
+  h2 a.anchor { color: var(--subtle); text-decoration: none; margin-left: 8px; font-weight: 400; opacity: 0; }
+  h2:hover a.anchor { opacity: 1; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 10px; }
+  strong { color: var(--text); font-weight: 500; }
+  code { font: 13px/1.5 ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; overflow-wrap: anywhere; }
+  footer { border-top: 1px solid var(--border); padding: 28px 0 40px; font-size: 13px; color: var(--subtle); }
+  footer .wrap { max-width: 960px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+  footer nav { display: flex; gap: 20px; }
+  footer a { color: var(--muted); text-decoration: none; }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px; }
+    main { padding: 48px 0 48px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5V2.5l7 7V2.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      Nudge
+    </a>
+    <nav class="links">
+      <a href="./">Download</a>
+      <a href="mailto:baradesignlab@gmail.com">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Privacy policy</h1>
+    <p class="updated">Last updated: 7 November 2026</p>
+
+    <div class="summary">
+      <p>Nudge is a browser extension that fills in web forms for you using Claude, through your own Claude account. This policy explains what Nudge handles and where it goes. In short: <strong>your data stays on your computer and in your own Claude account. Nudge has no servers and the developer never receives it.</strong> The only other service Nudge talks to is Lemon Squeezy, to check your subscription (see <a href="#payments">Payments</a>).</p>
+    </div>
+
+    <h2 id="what-nudge-stores">What Nudge stores, and where<a class="anchor" href="#what-nudge-stores" aria-label="Link to this section">#</a></h2>
+    <p>Everything Nudge remembers is stored <strong>locally in your browser</strong> (the extension's own storage) on your computer:</p>
+    <ul>
+      <li><strong>Your memory:</strong> details you've typed into forms or added yourself (for example your name, email addresses, phone number, address, job, links, short bios), each with a topic, tags and the site it came from.</li>
+      <li><strong>Site descriptions:</strong> a one-line description of sites where you've used forms (for example "job application", "anime fan forum"), so Nudge uses the right details on each site.</li>
+      <li><strong>Your settings.</strong></li>
+      <li><strong>Your trial and subscription:</strong> when the trial started and, once you subscribe, your license key with the plan name and purchase email that Lemon Squeezy returns.</li>
+    </ul>
+    <p>You can view, edit and delete all of it on the extension's <strong>Memory</strong> page. Removing the extension deletes it.</p>
+    <p>The Nudge helper (the small app on your computer that connects the extension to Claude) keeps a technical log in <code>~/.nudge/host.log</code>, with timings and counts only, never the values you fill in.</p>
+
+    <h2 id="what-is-sent-to-claude">What is sent to Claude, and when<a class="anchor" href="#what-is-sent-to-claude" aria-label="Link to this section">#</a></h2>
+    <p>Nudge uses <strong>Claude Code running on your computer, signed in with your own Claude account</strong>. Data is sent to Anthropic (the maker of Claude) only in these cases, and only through your account:</p>
+    <ul>
+      <li><strong>When you ask Nudge to fill a form</strong> (the Fill button, shortcut, menu or toolbar): the form's fields, the text around the form, the page address and title, and the parts of your memory that match the form. If "Let Claude read more of the page" is on, Claude may also read other sections of that page.</li>
+      <li><strong>When "Learn from forms I fill" is on:</strong> what you type into form fields, after you leave each field, so Claude can file useful details into your memory. Password fields, payment card numbers, one-time codes, search boxes, chats and comment boxes are never recorded. You can turn learning off at any time.</li>
+      <li><strong>When you import a CV or click "Learn about me from this page":</strong> that file or page.</li>
+    </ul>
+    <p>Anthropic processes this under <strong>your own agreement with Anthropic</strong> (see <a href="https://www.anthropic.com/legal">anthropic.com/legal</a>). Nudge's developer does not receive, see, or store any of it.</p>
+
+    <h2 id="payments">Payments<a class="anchor" href="#payments" aria-label="Link to this section">#</a></h2>
+    <p>Nudge is free for 7 days, then $1/month. Payments are handled by <strong>Lemon Squeezy</strong> (<a href="https://www.lemonsqueezy.com">lemonsqueezy.com</a>), which sells Nudge on the developer's behalf.</p>
+    <ul>
+      <li><strong>Checkout happens on Lemon Squeezy's website.</strong> Your card and billing details go to Lemon Squeezy under its own privacy policy. Nudge never sees them.</li>
+      <li><strong>The free trial is tracked in your browser only</strong> (the date Nudge was installed). Nothing is sent anywhere for it.</li>
+      <li><strong>Checking your subscription:</strong> when you activate a license key, and about once a day after that, Nudge sends Lemon Squeezy <strong>your license key and a name for this browser</strong> (for example "Chrome on Windows", so you can tell your devices apart in your Lemon Squeezy account). Lemon Squeezy replies with whether the subscription is active, the plan name and the email address you used to buy. Nudge keeps that reply <strong>only in your browser</strong>, to show it on the Account page.</li>
+      <li>No form data, page content or memory is ever sent to Lemon Squeezy.</li>
+      <li>You can cancel, change your card or see your key at <a href="https://app.lemonsqueezy.com/my-orders">app.lemonsqueezy.com/my-orders</a>. <strong>Deactivate on this device</strong> on the Account page removes the key from the browser.</li>
+    </ul>
+
+    <h2 id="what-nudge-never-does">What Nudge never does<a class="anchor" href="#what-nudge-never-does" aria-label="Link to this section">#</a></h2>
+    <ul>
+      <li>It never fills or reads password fields, payment card fields, bank details, government ID numbers or CAPTCHAs.</li>
+      <li>It never sends your form data or memory to the developer, to advertisers, or to any server other than Anthropic through your own Claude account. (The license check in <a href="#payments">Payments</a> sends only your license key and browser name.)</li>
+      <li>It never sells or shares your data, and it doesn't use it for anything except filling forms for you.</li>
+      <li>It doesn't read pages in the background: page content is only used when you ask Nudge to fill or learn, or (with learning on) when you type into a form.</li>
+    </ul>
+
+    <h2 id="permissions">Permissions<a class="anchor" href="#permissions" aria-label="Link to this section">#</a></h2>
+    <ul>
+      <li><strong>Read and change data on websites:</strong> to find forms, fill them when you ask, and remember what you type into forms. It also lets Nudge check your license key with Lemon Squeezy.</li>
+      <li><strong>Native messaging:</strong> to talk to the Nudge helper on your computer.</li>
+      <li><strong>Storage:</strong> to keep your memory and settings in your browser.</li>
+      <li><strong>Context menus, active tab:</strong> for "Fill this form with Nudge" and "Learn about me from this page".</li>
+    </ul>
+
+    <h2 id="contact">Contact<a class="anchor" href="#contact" aria-label="Link to this section">#</a></h2>
+    <p>Questions or requests: <a href="mailto:baradesignlab@gmail.com">baradesignlab@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Nudge</span>
+    <nav>
+      <a href="./">Download the helper</a>
+      <a href="mailto:baradesignlab@gmail.com">Support</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
