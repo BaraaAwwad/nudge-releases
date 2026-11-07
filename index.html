@@ -75,7 +75,10 @@
   .step li:last-child { margin-bottom: 0; }
   .step .sub { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--subtle); }
   .step .sub strong { color: var(--muted); font-weight: 500; }
-  code { font: 12.5px/1.5 ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; overflow-wrap: anywhere; }
+  .step .sub p { margin: 0 0 8px; }
+  .step .sub p:last-child { margin: 12px 0 0; }
+  pre { margin: 0 0 8px; font: 12.5px/1.6 ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; overflow-x: auto; white-space: pre; }
+  code { white-space: nowrap; font: 12.5px/1.5 ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; overflow-wrap: anywhere; }
 
   .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .facts h3 { color: var(--text); font-size: 14px; font-weight: 600; margin: 0 0 6px; }
@@ -156,34 +159,51 @@
   <section id="install">
     <div class="wrap">
       <h2>Install</h2>
-      <p class="section-lede">Unzip the download somewhere you'll keep it, then run the installer. It sets things up for your user only, with no admin rights, and opens claude.ai if you need to sign in: approve, copy the code, and paste it into the installer window.</p>
+      <p class="section-lede">The installer sets things up for your user only, with no admin rights. If you're not signed in to Claude yet, it opens claude.ai: approve, copy the code, and paste it into the installer window.</p>
       <div class="steps">
         <div class="step">
           <h3>Windows</h3>
           <ol>
-            <li>Unzip <code>nudge-helper-windows-x64.zip</code>.</li>
+            <li>Unzip the download somewhere you'll keep it.</li>
             <li>Double-click <code>install.cmd</code> in the folder.</li>
             <li>Open the Nudge extension. It should say <strong>Connected</strong>.</li>
           </ol>
-          <div class="sub"><strong>Where it goes:</strong> the helper runs from the folder you unzipped. The installer writes a small manifest to <code>%LOCALAPPDATA%\Nudge</code> and registers it with your browsers (per-user registry).<br><br><strong>Uninstall:</strong> double-click <code>uninstall.cmd</code>, then delete the folder.</div>
+          <div class="sub">
+            <p><strong>Where it goes:</strong> the helper runs from the unzipped folder. A small manifest is written to</p>
+            <pre>%LOCALAPPDATA%\Nudge</pre>
+            <p>and registered with your browsers in the per-user registry.</p>
+            <p><strong>Uninstall:</strong> double-click <code>uninstall.cmd</code>, then delete the folder.</p>
+          </div>
         </div>
         <div class="step">
           <h3>macOS</h3>
           <ol>
-            <li>Unzip <code>nudge-helper-macos-arm64.zip</code>.</li>
-            <li>Open Terminal in that folder and run <code>./install.sh</code></li>
+            <li>Unzip the download somewhere you'll keep it.</li>
+            <li>Open Terminal in that folder and run <code>./install.sh</code>.</li>
             <li>Open the Nudge extension. It should say <strong>Connected</strong>.</li>
           </ol>
-          <div class="sub"><strong>Where it goes:</strong> the helper runs from the folder you unzipped. Browser manifests go in <code>~/Library/Application Support/&lt;browser&gt;/NativeMessagingHosts</code>. If macOS blocks it, run <code>xattr -dr com.apple.quarantine .</code> in the folder first.<br><br><strong>Uninstall:</strong> run <code>./uninstall.sh</code>, then delete the folder.</div>
+          <div class="sub">
+            <p><strong>Where it goes:</strong> the helper runs from the unzipped folder. Each browser gets a manifest in</p>
+            <pre>~/Library/Application Support/
+  &lt;browser&gt;/NativeMessagingHosts</pre>
+            <p><strong>If macOS blocks it,</strong> run this in the folder first:</p>
+            <pre>xattr -dr com.apple.quarantine .</pre>
+            <p><strong>Uninstall:</strong> run <code>./uninstall.sh</code>, then delete the folder.</p>
+          </div>
         </div>
         <div class="step">
           <h3>Linux</h3>
           <ol>
-            <li>Unzip <code>nudge-helper-linux-x64.zip</code>.</li>
-            <li>Open a terminal in that folder and run <code>./install.sh</code></li>
+            <li>Unzip the download somewhere you'll keep it.</li>
+            <li>Open a terminal in that folder and run <code>./install.sh</code>.</li>
             <li>Open the Nudge extension. It should say <strong>Connected</strong>.</li>
           </ol>
-          <div class="sub"><strong>Where it goes:</strong> the helper runs from the folder you unzipped. Browser manifests go in <code>~/.config/&lt;browser&gt;/NativeMessagingHosts</code>.<br><br><strong>Uninstall:</strong> run <code>./uninstall.sh</code>, then delete the folder.</div>
+          <div class="sub">
+            <p><strong>Where it goes:</strong> the helper runs from the unzipped folder. Each browser gets a manifest in</p>
+            <pre>~/.config/&lt;browser&gt;/
+  NativeMessagingHosts</pre>
+            <p><strong>Uninstall:</strong> run <code>./uninstall.sh</code>, then delete the folder.</p>
+          </div>
         </div>
       </div>
     </div>
